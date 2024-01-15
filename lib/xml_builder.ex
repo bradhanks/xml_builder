@@ -422,6 +422,6 @@ defmodule XmlBuilder do
       do: Enum.map_intersperse(enumerable, separator, mapper)
   else
     defp map_intersperse(enumerable, separator, mapper),
-      do: enumerable |> Enum.map(mapper) |> Enum.intersperse(separator)
+      do: enumerable |> Enum.map_intersperse(separator, mapper) 
   end
 end
